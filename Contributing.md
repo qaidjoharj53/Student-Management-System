@@ -5,7 +5,10 @@ We welcome contributions to the Student Management System project! Whether you'r
 ## Getting Started
 
 1. Fork this repository.
-2. Clone your forked repository to your local machine.
+
+2. Star this repository.
+
+3. Clone your forked repository to your local machine.
    `git clone https://github.com/<your username>/Banking_System.git`
 
 ## Making Changes
