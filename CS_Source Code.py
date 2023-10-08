@@ -180,6 +180,13 @@ def delete_roll():
     os.rename("temp.dat", "stud.dat")
     input("Press any key to continue....")
 
+if not os.path.isfile("stud.dat"):
+    try:
+        file = open("stud.dat","wb")
+        file.close()
+        print("New file 'stud.dat' created.")
+    except Exception as e:
+        print(f"Error: {e}")
 
 while True:
     os.system("cls")
