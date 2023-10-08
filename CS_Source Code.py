@@ -181,12 +181,29 @@ def delete_roll():
     input("Press any key to continue....")
 
 if not os.path.isfile("stud.dat"):
-    try:
-        file = open("stud.dat","wb")
-        file.close()
-        print("New file 'stud.dat' created.")
-    except Exception as e:
-        print(f"Error: {e}")
+    print("'stud.dat' file doesn't exist.")
+    print("1 -> Generate a new empty file")
+    print("2 -> Generate a file with fake data")
+
+    print(40 * "=")
+    choice = input("Enter your choice: ")
+    print(40 * "=")
+    
+    if choice == "1":
+        try:
+            file = open("stud.dat", "wb")
+            file.close()
+            print("New empty file 'stud.dat' created.")
+        except Exception as e:
+            print(f"Error: {e}")
+    elif choice == "2":
+        print("Generating fake data...")
+        os.system("python create_dat.py")
+        print("Fake data generated.")
+    else:
+        print("Invalid choice!")
+        time.sleep(1)
+
 
 while True:
     os.system("cls")
