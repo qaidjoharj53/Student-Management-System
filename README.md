@@ -1,19 +1,21 @@
 # Student-Management-System
 
-For every school important task for administration department is to manage student information in a procedure oriented manner with latest updates for every year which need to be available for easy access. This can be provided by a simple Students Management system to help administration so to efficiently manage student’s details. To store data MySQL is used by connecting MySQL with Python using MySQL Connector. There is also a Login Panel where now admin can register themselves and can Login.
+[![GitHub stars](https://img.shields.io/github/stars/qaidjoharj53/Student-Management-System)](https://github.com/yourusername/Student-Management-System/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/qaidjoharj53/Student-Management-System)](https://github.com/yourusername/Student-Management-System/network)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+For every school, an important task for the administration department is to manage student information in a procedure-oriented manner with the latest updates for every year, which need to be available for easy access. This can be provided by a simple Students Management system to help administration efficiently manage student's details. To store data, MySQL is used by connecting MySQL with Python using MySQL Connector. There is also a Login Panel where now admin can register themselves and can Login.
 
 ## Installation
 
-##### 1. Install Mysql Python connector 
+##### 1. Install MySQL Python Connector 
 
-- [Mysql](https://dev.mysql.com/downloads/mysql/)
-- [Mysql Python connector](https://dev.mysql.com/downloads/connector/python/)
+- [MySQL](https://dev.mysql.com/downloads/mysql/)
+- [MySQL Python Connector](https://dev.mysql.com/downloads/connector/python/)
  
-##### 2. install Mysql in Python using below command
-  ```bash
+##### 2. Install MySQL in Python using below command
+
     pip install mysql
-  ```
-    
 ## Features
 
 ##### Student Class:
@@ -59,5 +61,3 @@ Utilizes os.system("cls") to clear the console screen for better user interactio
 ## Deployment
 
 To deploy this project just run .py files.
-
-
