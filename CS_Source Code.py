@@ -16,31 +16,31 @@ class used
 
 
 class student(object):
-    def __int__(s):
-        s.roll = 0
-        s.name = ""
-        s.per = 0
+    def __init__(self):
+        self.roll = 0
+        self.name = ""
+        self.per = 0
 
-    def add_rec(s):
-        s.roll = int(input("Enter roll number: "))
-        s.name = input("Enter name: ")
-        s.name = s.name.upper()
-        s.per = float(input("Enter percentage: "))
+    def add_rec(self):
+        self.roll = int(input("Enter roll number: "))
+        self.name = input("Enter name: ")
+        self.name = self.name.upper()
+        self.per = float(input("Enter percentage: "))
 
-    def disp_rec(s):
-        print("roll number: ", s.roll)
-        print("name: ", s.name)
-        print("percentage: ", s.per)
+    def disp_rec(self):
+        print("roll number: ", self.roll)
+        print("name: ", self.name)
+        print("percentage: ", self.per)
 
-    def display_rec(s):
-        print("%-10s" % s.roll, "%-20s" % s.name, "%-10s" % s.per)
+    def display_rec(self):
+        print("%-10s" % self.roll, "%-20s" % self.name, "%-10s" % self.per)
         # print("in display_rec")
 
-    def modify_rec(s):
-        s.roll = int(input("Enter new roll number: "))
-        s.name = input("Enter new name: ")
-        s.name = s.name.upper()
-        s.per = float(input("Enter new percentage: "))
+    def modify_rec(self):
+        self.roll = int(input("Enter new roll number: "))
+        self.name = input("Enter new name: ")
+        self.name = self.name.upper()
+        self.per = float(input("Enter new percentage: "))
 
 
 def write_record():
