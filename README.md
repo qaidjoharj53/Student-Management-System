@@ -12,6 +12,10 @@ For every school, an important task for the administration department is to mana
 
 - [MySQL](https://dev.mysql.com/downloads/mysql/)
 - [MySQL Python Connector](https://dev.mysql.com/downloads/connector/python/)
+- fake 
+    ```bash
+    pip install fake
+    ```
  
 ##### 2. Install MySQL in Python using below command
 
