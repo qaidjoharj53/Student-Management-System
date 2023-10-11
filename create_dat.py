@@ -1,12 +1,8 @@
-from fake import Faker
+from faker import Faker
+from models import Student
 import random
 import pickle
 
-class Student:
-    def __init__(self, roll, name, percentage):
-        self.roll = roll
-        self.name = name
-        self.percentage = percentage
 
 def generate_fake_records(n):
     fake = Faker()
@@ -22,6 +18,7 @@ def generate_fake_records(n):
 
     return records
 
+
 def save_to_dat(records):
     try:
         with open("fake_stud.dat", "wb") as file:
@@ -30,6 +27,7 @@ def save_to_dat(records):
         print(f"{len(records)} fake records saved to fake_stud.dat")
     except Exception as e:
         print(f"Error: {e}")
+
 
 if __name__ == "__main__":
     n = int(input("Enter the number of fake records to generate: "))
