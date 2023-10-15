@@ -180,6 +180,7 @@ def delete_roll():
     os.rename("temp.dat", "stud.dat")
     input("Press any key to continue....")
 
+
 if not os.path.isfile("stud.dat"):
     print("'stud.dat' file doesn't exist.")
     print("1 -> Generate a new empty file")
@@ -188,7 +189,7 @@ if not os.path.isfile("stud.dat"):
     print(40 * "=")
     choice = input("Enter your choice: ")
     print(40 * "=")
-    
+
     if choice == "1":
         try:
             file = open("stud.dat", "wb")
@@ -206,7 +207,7 @@ if not os.path.isfile("stud.dat"):
 
 
 while True:
-    os.system("cls")
+    os.system("cls" if os.name == "nt" else "clear")
     print(40 * "=")
     print(
         """              Main Menu 
