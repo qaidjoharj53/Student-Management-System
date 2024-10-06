@@ -9,11 +9,12 @@ class Mygui(QMainWindow):
 
     def __init__(self):
         super(Mygui, self).__init__()
-        uic.loadUi("Student-Management-System/GUI/first_gui.ui", self)
+        uic.loadUi("first_gui.ui", self)
+
         self.show()
 
         # Connect buttons to their respective methods
-        self.pushButton.clicked.connect(self.add_record)         # Add Record Button
+        self.pushButton.clicked.connect(self.add_record)         # Record Button
         self.pushButton_2.clicked.connect(self.display_records)  # Display Records Button
         self.pushButton_3.clicked.connect(self.delete_file)      # Delete All Records Button
 

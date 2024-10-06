@@ -13,3 +13,7 @@ A simple Student Management System built using PyQt5 and Python for managing stu
 - **Python**: Programming language used for development.
 - **PyQt5**: GUI toolkit for creating the application interface.
 - **Pickle**: Used for serializing and deserializing Python objects.
+
+## To run the GUI:
+
+> python GUI_student.py
