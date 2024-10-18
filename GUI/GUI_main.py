@@ -11,7 +11,7 @@ class Mygui(QMainWindow):
         super(Mygui, self).__init__()
         
         # Load the .ui file 
-        uic.loadUi("Student-Management-System\\GUI\\pages.ui", self)
+        uic.loadUi("GUI\\pages.ui", self)
 
         self.tableWidget = self.findChild(QTableWidget, "tableWidget")
         self.pushButton_6.clicked.connect(self.display_records)
@@ -253,7 +253,7 @@ def main():
     app = QApplication([])
 
     # Load the external stylesheet
-    load_stylesheet(app, "Student-Management-System/GUI/stylesheet.qss")
+    load_stylesheet(app, "GUI/stylesheet.qss")
     window = Mygui()
     app.exec_()
 
