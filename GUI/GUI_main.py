@@ -11,7 +11,7 @@ class Mygui(QMainWindow):
         super(Mygui, self).__init__()
         
         # Load the .ui file 
-        uic.loadUi("Student-Management-System/GUI/pages.ui", self)
+        uic.loadUi("Student-Management-System\\GUI\\pages.ui", self)
 
         self.tableWidget = self.findChild(QTableWidget, "tableWidget")
         self.pushButton_6.clicked.connect(self.display_records)
