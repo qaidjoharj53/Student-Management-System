@@ -1,0 +1,196 @@
+#MainWindow,#centralwidget {
+	background-color: #003d5a;
+    border: 2px solid #aaffff;
+    border-radius: 9px;
+}
+#widget_Main{
+	background-color: rgb(0, 0, 0);
+    border: 2px solid #aaffff;
+    border-radius: 9px;
+}
+#stackedWidget {
+	background-color: #000000;
+    border: 2px solid #aaffff;
+    border-radius: 9px;
+}
+QLabel {
+    font-size: 24px;
+    color: #ffffff;
+}
+#label,#label_5,#label_6,#label_3{
+color: #ffffff;
+font-weight: bold;
+}
+
+#image_label {
+    border-radius: 10px;
+    background-color: #F5F5F5;
+	padding-left: 2px;    
+}
+#image_label:hover {
+    border-color: #3A6F91;        
+    background-color: #E8F1F8;   
+}
+
+QProgressBar {
+    border: 2px solid #4CAF; 
+    border-radius: 5px; 
+    text-align: center;     
+    background-color: #E0E0E0;
+}
+
+QProgressBar::chunk {
+    background-color: #4CAF50; 
+    border-radius: 5px;      
+}
+/* Table Widget Styling */
+QTableWidget {
+    border: 1px solid #dcdcdc;
+    gridline-color: #dcdcdc;
+    background-color: #f9f9f9;
+    selection-background-color: #aed6f1;
+    selection-color: #000000; 
+    color: #2c3e50;
+    font: 14px "Arial", sans-serif;
+}
+
+QHeaderView::section {
+    background-color: #2980b9;
+    color: #ffffff; 
+    padding: 4px;
+    font-weight: bold;
+    border: 1px solid #dcdcdc;
+}
+
+QTableWidget::item {
+    padding: 8px;
+    border: 1px solid #dcdcdc;
+}
+
+QTableWidget::item:alternate {
+    background-color: #ecf0f1; 
+}
+
+QScrollBar:horizontal {
+    height: 12px;
+    background-color: #f9f9f9;
+}
+
+QScrollBar:vertical {
+    width: 12px;
+    background-color: #f9f9f9;
+}
+
+QScrollBar::handle {
+    background-color: #2980b9;
+    border-radius: 6px;
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+    background: none;
+}
+QHeaderView::section:horizontal {margin-right: 8; border: 1px solid}
+#tableWidget{
+padding-left: 3px;
+padding-right: 3px;
+padding-top: 2px;
+border-radius: 7px;
+}
+
+#pushButton_6,#pushButton_8{
+border: 1px solid #dcdcdc;
+border-radius: 7px;
+color: white;
+padding: 2px;
+margin-top: 4px;
+margin-bottom: 4px;
+height: 28px;
+}
+
+QStatusBar{
+color: white;
+font-style: italic;
+}
+/*For Buttons*/
+QPushButton {
+    background-color: #5C6BC0;
+    color: white; 
+    font-size: 16px;  
+    font-weight: bold; 
+    padding: 5px 5px; 
+    border-radius: 10px; 
+    border: 2px solid #3949AB;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover State */
+QPushButton:hover {
+    background-color: #7986CB;  
+    color: #E3F2FD; 
+    transform: scale(1.05);
+}
+
+QPushButton:pressed {
+    background-color: #303F9F; 
+    transform: scale(0.98);  
+}
+
+QPushButton:disabled {
+    background-color: #B0BEC5; 
+    color: #ECEFF1;  
+    border: 2px solid #CFD8DC; 
+}
+
+#pushButton_1 {
+    background-color: #4CAF50; 
+}
+#pushButton_1:hover {
+    background-color: #66BB6A; 
+}
+#pushButton_1:pressed {
+    background-color: rgb(55, 127, 57);  
+}
+
+#pushButton_5 {
+    background-color: #FFCA28; 
+}
+#pushButton_5:hover {
+    background-color: #FFD54F; 
+}
+#pushButton_5:pressed {
+    background-color: rgb(190, 190, 0); 
+}
+
+/* Records button */
+#pushButton_7 {
+    background-color: #42A5F5; 
+}
+#pushButton_7:hover {
+    background-color: #64B5F6;
+}
+#pushButton_7:pressed {
+    background-color: rgb(65, 131, 197);
+}
+/*This is for message pop-up*/
+QMessageBox {
+    background-color: #002b36;  /* Dark background */
+    border: 2px solid #aaffff;  /* Cyan border */
+    color: #ffffff;             /* White text */
+    font-size: 16px;
+}
+QMessageBox QLabel {
+    color: #ffffff;             /* Ensure label text is white */
+}
+QMessageBox QPushButton {
+    background-color: #586e75;  /* Gray buttons */
+    color: #ffffff;             /* White text */
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+QMessageBox QPushButton:hover {
+    background-color: #93a1a1;  /* Lighter gray on hover */
+}
+QMessageBox QPushButton:pressed {
+    background-color: #657b83;  /* Darker gray on press */
+}

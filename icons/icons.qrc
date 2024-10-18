@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>../../../../../Downloads/png-transparent-educational-technology-learning-management-system-course-student-education-service-people-presentation.png</file>
+    <file>pen.png</file>
+    <file>students.png</file>
+    <file>graduation.png</file>
+  </qresource>
+  <qresource prefix="style">
+    <file>../../../../../Downloads/style_stud.qss</file>
+  </qresource>
+</RCC>
