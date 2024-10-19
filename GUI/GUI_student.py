@@ -9,7 +9,7 @@ class Mygui(QMainWindow):
 
     def __init__(self):
         super(Mygui, self).__init__()
-        uic.loadUi("first_gui.ui", self)
+        uic.loadUi("Student-Management-System\\GUI\\first_gui.ui", self)
 
         self.show()
 
