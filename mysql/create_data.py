@@ -2,19 +2,19 @@ from faker import Faker
 import random
 import mysql.connector
 
+
 class Student:
     def __init__(self, roll, name, percentage):
         self.roll = roll
         self.name = name
         self.percentage = percentage
 
+
 connection = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="12345",
-  database="student_management"
+    host="localhost", user="root", password="12345", database="student_management"
 )
 cursor = connection.cursor()
+
 
 def generate_fake_records(n):
     fake = Faker()
@@ -30,6 +30,7 @@ def generate_fake_records(n):
 
     return records
 
+
 def save_to_database(records):
     try:
         for record in records:
@@ -41,6 +42,7 @@ def save_to_database(records):
         print(f"{len(records)} records inserted into the database.")
     except mysql.connector.Error as e:
         print(f"Error inserting records into the database: {e}")
+
 
 if __name__ == "__main__":
     n = int(input("Enter the number of fake records to generate: "))

@@ -3,6 +3,7 @@ roll number
 name
 percentage
 """
+
 """
 modules imported
 """
@@ -11,11 +12,9 @@ import os
 import time
 
 import mysql.connector
+
 connection = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="12345",
-  database="student_management"
+    host="localhost", user="root", password="12345", database="student_management"
 )
 cursor = connection.cursor()
 """
@@ -54,8 +53,10 @@ class student(object):
         self.name = self.name.upper()
         self.per = float(input("Enter new percentage: "))
 
-cursor.execute("CREATE TABLE IF NOT EXISTS students(roll int primary key,name varchar(100), percentage int )")
 
+cursor.execute(
+    "CREATE TABLE IF NOT EXISTS students(roll int primary key,name varchar(100), percentage int )"
+)
 
 
 def write_record():
@@ -124,6 +125,7 @@ def search_name():
         print("Record is not present!!")
     input("Press any key to continue....")
 
+
 def modify_roll():
     z = 0
     try:
@@ -149,6 +151,7 @@ def modify_roll():
         print("Record not found!!")
     input("Press any key to continue....")
 
+
 def delete_roll():
     z = 0
     try:
@@ -171,6 +174,7 @@ def delete_roll():
         print("Record not found!!")
     input("Press any key to continue....")
 
+
 cursor.execute("SELECT * FROM students LIMIT 1")
 record = cursor.fetchone()
 if record is None:
@@ -189,7 +193,6 @@ if record is None:
     elif choice != "2":
         print("Invalid choice!")
         time.sleep(1)
-
 
 
 while True:

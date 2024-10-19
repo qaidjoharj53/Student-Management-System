@@ -1,7 +1,7 @@
-# file_operations.py
 import pickle
 import os
 import student
+
 
 def write_record(student):
     try:
@@ -11,7 +11,8 @@ def write_record(student):
         return "Record added successfully."
     except Exception as e:
         return f"Error writing record: {e}"
-    
+
+
 def display_all_records():
     records = []
     try:
@@ -19,9 +20,9 @@ def display_all_records():
             while True:
                 try:
                     student = pickle.load(file)  # Load the Student object
-                    records.append(student.display_record()) 
+                    records.append(student.display_record())
                 except EOFError:
-                    break 
+                    break
         return records if records else ["No records found."]
     except FileNotFoundError:
         return ["File not found! Please add a record first."]
@@ -30,10 +31,11 @@ def display_all_records():
     except IOError:
         return ["File could not be opened!"]
 
+
 def update_record(roll_number, new_name=None, new_percentage=None):
     updated = False
     records = []
-    
+
     try:
         # Open the file in read-binary mode
         with open("stud.dat", "rb") as file:
@@ -50,12 +52,12 @@ def update_record(roll_number, new_name=None, new_percentage=None):
                     records.append(student_obj)
                 except EOFError:
                     break
-        
+
         # Rewrite the updated records
         with open("stud.dat", "wb") as file:
             for student_obj in records:
                 pickle.dump(student_obj, file)
-        
+
         if updated:
             return f"Record for Roll Number {roll_number} updated successfully."
         else:
@@ -67,7 +69,8 @@ def update_record(roll_number, new_name=None, new_percentage=None):
         return "Error in unpickling data! The file might be corrupted."
     except Exception as e:
         return f"An error occurred: {e}"
-    
+
+
 def get_record(roll_number):
     try:
         with open("stud.dat", "rb") as file:
@@ -75,7 +78,9 @@ def get_record(roll_number):
                 try:
                     student_obj = pickle.load(file)  # Load each student object
                     if student_obj.roll == roll_number:
-                        return student_obj.display_record()  # Return the record if roll number matches
+                        return (
+                            student_obj.display_record()
+                        )  # Return the record if roll number matches
                 except EOFError:
                     break
         return f"Record with Roll Number {roll_number} not found."
@@ -85,7 +90,8 @@ def get_record(roll_number):
         return "Error in unpickling data! The file might be corrupted."
     except Exception as e:
         return f"An error occurred: {e}"
-    
+
+
 def clear_all_records():
     try:
         with open("stud.dat", "wb") as file:
@@ -93,7 +99,8 @@ def clear_all_records():
         return "All records deleted."
     except Exception as e:
         return f"Error deleting records: {str(e)}"
-    
+
+
 def delete_file(self):
     try:
         if os.path.exists("stud.dat"):

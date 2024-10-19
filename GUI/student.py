@@ -11,6 +11,6 @@ class Student:
 
     def display_record(self):
         return f"{self.roll},{self.name},{self.per}"
-    
+
     def __str__(self):
         return f"Roll: {self.roll}, Name: {self.name}, Percentage: {self.per}"

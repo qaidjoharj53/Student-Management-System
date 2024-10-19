@@ -14,9 +14,11 @@ class Mygui(QMainWindow):
         self.show()
 
         # Connect buttons to their respective methods
-        self.pushButton.clicked.connect(self.add_record)         # Record Button
-        self.pushButton_2.clicked.connect(self.display_records)  # Display Records Button
-        self.pushButton_3.clicked.connect(self.delete_file)      # Delete All Records Button
+        self.pushButton.clicked.connect(self.add_record)  # Record Button
+        self.pushButton_2.clicked.connect(
+            self.display_records
+        )  # Display Records Button
+        self.pushButton_3.clicked.connect(self.delete_file)  # Delete All Records Button
 
     def add_record(self):
         # Retrieve input values from the GUI
@@ -25,14 +27,16 @@ class Mygui(QMainWindow):
         percentage = self.lineEdit_3.text()
 
         # Ensure the inputs are valid (check if fields are not empty and percentage is numeric)
-        if roll.isdigit() and percentage.replace('.', '', 1).isdigit():
+        if roll.isdigit() and percentage.replace(".", "", 1).isdigit():
             # Create a Student object
             student_obj = student.Student()
             student_obj.add_record(int(roll), name, float(percentage))
 
             # Write the student record to the file using file_operations
             result = file_operations.write_record(student_obj)
-            self.statusBar().showMessage(result)  # Display result message in the status bar
+            self.statusBar().showMessage(
+                result
+            )  # Display result message in the status bar
 
             # Clear the input fields after adding the record
             self.lineEdit.clear()
@@ -51,7 +55,9 @@ class Mygui(QMainWindow):
         # Display all records in the textEdit widget
         if records:
             for record in records:
-                self.textEdit.append(record + "\n")  # Display each record and add a new line
+                self.textEdit.append(
+                    record + "\n"
+                )  # Display each record and add a new line
         else:
             self.textEdit.append("No records found.")
 
@@ -73,5 +79,5 @@ def main():
     app.exec_()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
